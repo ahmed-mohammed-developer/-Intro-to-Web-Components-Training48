@@ -34,7 +34,7 @@ for (const order of orders){
 for (const [value, key] of orders) {
   console.log(value, key);
 }
-*/
+
 const set = new Set();
 set.add(10);
 set.add(30);
@@ -56,3 +56,21 @@ console.log(tags);
 const numbers = [1, 2, 3, 1, 3, 41, 2, 3, 1, 3, 41, 2, 3, 1, 3, 41, 2, 3, 1, 3, 4];
 const set1 = new Set(numbers);
 console.log(set1); 
+
+function input_type(value) {
+  // write your code here
+ if(/^\d+$/.test(value)) {
+  return "integer"
+ } else if (typeof value === "string"){
+  return "string"
+ }
+ return "double"
+}
+console.log(input_type(12))
+
+*/
+function delete_element_in_array(arr, index) {
+  // write your code here
+   return arr.filter(x => arr.indexOf(x) === index);
+}
+console.log(delete_element_in_array([3, 2, 4, 88], 2))
